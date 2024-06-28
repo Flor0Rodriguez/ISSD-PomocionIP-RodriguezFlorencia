@@ -40,6 +40,7 @@ public class Main {
 		        } while (NumeroUsuario != NumeroAdivinar & intentos<5);
 			      if (NumeroUsuario != NumeroAdivinar){
 			      System.out.print("HAS USADO TODOS LOS INTENTOS. EL NÚMERO ERA " +NumeroAdivinar);} //Han finalizado los intentos
+			      scanner.close();
 
 }
 }
