@@ -15,8 +15,8 @@ public class Main {
 		
 		System.out.println("\nADIVINA EL NÚMERO");
 		do {
-				
-				System.out.println(" Ingrese un Número del 1 al 10: ");
+		try {
+			    System.out.println(" Ingrese un Número del 1 al 10: ");
 				NumeroUsuario = scanner.nextInt();
 				intentos++;
 				
@@ -30,9 +30,11 @@ public class Main {
 				else {if  (NumeroUsuario > NumeroAdivinar) {
 					System.out.println("El número debe ser menor. Intenta de nuevo. ");} }
 				}
-				}
-			
-			      while (NumeroUsuario != NumeroAdivinar & intentos<5);
+				} catch(InputMismatchException e) {
+		             scanner.nextLine();
+		             System.out.println("ERROR! INTENTALO DE NUEVO INGRESANDO UN NÚMERO DEL 1 AL 10 ");}
+		
+		        } while (NumeroUsuario != NumeroAdivinar & intentos<5);
 			      if (NumeroUsuario != NumeroAdivinar){
 			      System.out.print("HAS USADO TODOS LOS INTENTOS. EL NÚMERO ERA " +NumeroAdivinar);}
 
